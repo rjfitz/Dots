@@ -3,8 +3,8 @@ This is a collection of my personal dot files meant to help with setup. This is 
 Shout out to MattKline13 for the excellent Mac interfaces.
 
 Installation Instructions:
-	Rename osVerify to ".bash_profile"
-	Move ".bash_config" and ".bash+profile" to ~ 
+	Rename 'osVerify.sh' to '.bash_profile'
+	Move '.bash_config' and '.bash+profile' to ~ 
 	Reload shell
 
 Needed improvements:
