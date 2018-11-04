@@ -38,16 +38,11 @@ alias spotlightOn="sudo mdutil -a -i on"
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec ${SHELL} -l"
 
-# Merge PDF files - Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
-alias mergepdf="/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py"
-
 # Search for a specific file
 alias search="find . -name"
 
 # Open a file in sublime
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-
-
 
 # Zip a folder
 zipf () { 
@@ -94,14 +89,6 @@ finder() {
     fi;
 }
 
-# Open a file or if no argument is given the entire directory in atom
-openatom() {
-    if [ $# -eq 0 ]; then
-        atom .;
-    else
-        atom "$@";
-    fi;
-}
 
 # Update macOS Apps, Homebrwe, Ruby Gems, NPM and installed packages
 update () {
@@ -109,11 +96,6 @@ update () {
   brew update
   brew upgrade
   brew cleanup
-  npm install npm -g
-  npm update -g
-  gem update --system
-  gem update
-  gem cleanup
 }
 
 # Change file permissions to prefered
@@ -143,12 +125,6 @@ getIP() {
     ipconfig getifaddr en0;
     echo "Public IP"
     curl ifconfig.me
-}
-
-# Compile and run java file
-javaRun() {
-    javac *.java
-    java $1
 }
 
 # Compile and run Kotlin file
